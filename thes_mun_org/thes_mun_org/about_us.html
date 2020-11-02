@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ  </title>
+
+    <link rel="stylesheet" href="/assets/css/main.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500&display=swap" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <div class="container content red-bottom">
+        <h2 class="sans-small-caps white bigger" >About Us</h2>
+    </div>
+        <div class="about-container content">
+            <div class="column border-right pad-right">
+                <div class="block image-block">
+                    <div class="block-text">Sample Text Sample Text</div>
+                </div>
+                <div class="block">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae rem sapiente illum
+                    inventore incidunt quibusdam architecto reprehenderit, vel quam hic quis consectetur, modi enim
+                     cum corrupti voluptatum a quia eos ullam nisi? Voluptas ducimus quasi veniam recusandae quod.
+                    Porro, necessitatibus!
+                </div>
+                <div class="block image-block">
+                    <div class="block-text">Sample Text Sample Text</div>
+                </div>
+
+            </div>
+            <div class="column pad-right">
+
+                <div class="block text-right">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae rem sapiente illum
+                    inventore incidunt quibusdam architecto reprehenderit, vel quam hic quis consectetur, modi enim
+                     cum corrupti voluptatum a quia eos ullam nisi? Voluptas ducimus quasi veniam recusandae quod.
+                    Porro, necessitatibus!
+                </div>
+                <div class="block image-block">
+                    <div class="block-text">Sample Text</div>
+                </div>
+                <div class="block text-right">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae rem sapiente illum
+                    inventore incidunt quibusdam architecto reprehenderit, vel quam hic quis consectetur, modi enim
+                     cum corrupti voluptatum a quia eos ullam nisi? Voluptas ducimus quasi veniam recusandae quod.
+                    Porro, necessitatibus!
+                </div>
+            </div>
+
+    </div>
+
+    <div class="container content">
+        <h2 class="content small-caps" ">Frequently Asked Questions</h2>
+    </div>
+    <div class="container red-bottom">
+
+        <button class="content accordion hover-link" >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae atque perferendis quas? Modi cum quibusdam consectetur itaque ducimus in porro et tenetur dolorum ratione. Maxime laboriosam nisi dicta perspiciatis tempora!</button>
+        <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+
+        <button class="content accordion hover-link" >Question 2</button>
+        <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+
+        <button class="content accordion hover-link" >Question 3</button>
+        <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+
+
+        <p class="content message">Have more questions? You can get in touch with us in <a class="link small-caps" href="#">Contact Us</a> </p>
+    </div>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+
+            if (panel.style.maxHeight) {
+
+                panel.style.maxHeight = null;
+                setTimeout(() => {
+                    panel.classList.toggle("open-desc");
+                }, 150);
+
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + 999  + "px";
+
+                panel.classList.toggle("open-desc");
+            }
+          });
+        }
+    </script>
+
+
+</body>
+</html>
