@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+
+    <link rel="stylesheet" href="{% static 'material/css/main.css' %}">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500&display=swap" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@300;400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+</head>
+{% include "main/navbar.html" %}
+<body>
+
+
+    <!-- <h2 class="sans-small-caps">Contacting Us</h2> -->
+    <div class="container content red-bottom">
+        <h2 class="sans-small-caps bigger">Contact Us</h2>
+
+        <!-- <img  src="/images/contact_us_b.jpg" alt="" class="dec-img "> -->
+    </div>
+
+
+    <div class="container faq content">
+
+        <p>Before trying to contact us please consult the <a class="link" href="faq.html">FAQ</a> page.</p>
+
+        <h2 class="small-caps">General Queries</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, ea inventore vel voluptas praesentium quod officiis animi ab quas non porro culpa reprehenderit nisi vitae dolorum a temporibus voluptatibus commodi.</p>
+
+        <h2 class="small-caps">Specific Queries</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, ea inventore vel voluptas praesentium quod officiis animi ab quas non porro culpa reprehenderit nisi vitae dolorum a temporibus voluptatibus commodi.</p>
+
+
+
+
+    <h2 class="small-caps">Our Media Links</h2>
+    <a href="#"><i class="fa fa-twitter ">&nbsp;</i>Twitter</a><br>
+    <a href="#"><i class="fa fa-facebook ">&nbsp;</i>Facebook</a><br>
+    <a href="#"><i class="fa fa-instagram ">&nbsp;</i>Instagram</a>
+
+
+    <!-- <div style="width: 100%; margin-left: auto; margin-right: auto; max-width: 40rem; "> -->
+
+    <div style="width: 100%;  max-width: 40rem; ">
+
+        <h2 class="small-caps">Send Us A Message</h2>
+
+            <form class="pure-form pure-form-stacked sans">
+                <fieldset class="pure-group">
+                    <!-- <legend class="lil-pad sans-small-caps">Contact us</legend> -->
+
+                    <label class="lil-pad " for="stacked-name">Name</label>
+                    <input  type="text" id="stacked-name" class=" pure-u-1 pad"	 />
+
+                    <label class="lil-pad " for="stacked-email">Email *</label>
+                    <input type="email" id="stacked-email" class="pad pure-u-1" required="" />
+
+                </fieldset>
+
+                <fieldset class="pure-group">
+                        <label class="lil-pad " for="stacked-message">Message *</label>
+                        <textarea class="pad pure-u-1" id="stacked-message" required=""></textarea>
+                </fieldset>
+                <button style="background-color: black;" type="submit" class="small-caps pure-button pure-u-1 pure-button-primary pure-black hover-link pad smaller">Send</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+{% include "main/footer.html" %}
+</html>

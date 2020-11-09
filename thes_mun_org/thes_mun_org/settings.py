@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'events.apps.EventsConfig',
     'journal.apps.JournalConfig',
     'partners.apps.PartnersConfig',
+    'main.apps.MainConfig',
 ]
 
 SITE_ID = 1

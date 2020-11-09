@@ -10,6 +10,6 @@ from django.views.generic import (ListView,
 # Create your views here.
 
 class PartnersView(ListView):
-    template_name = 'partners/partners_list.html'
+    template_name = 'partners/donors.html'
     model = Partner
     context_object_name = 'partners'

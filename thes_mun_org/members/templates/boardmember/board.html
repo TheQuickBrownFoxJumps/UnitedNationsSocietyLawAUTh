@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500&display=swap" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'material/css/main.css' %}">
+</head>
+
+{% include "main/navbar.html" %}
+
+<body>
+    {% for member in boardmember %}
+    <div class="container">
+        <div class="portraits-container ">
+            <div class="person-container">
+                <a class="round" href="">
+                    <div class="portrait-container">
+                        <!-- Image path here for portrait -->
+                        <img src="{{member.member_pic.url}}" class="portrait"></img>
+                        <!-- Image path here for linkedin icon -->
+                        <img class="icon" src="{% static 'material/imgs/linkedin-square.svg' %}" alt="">
+                    </div>
+                </a>
+
+                <div class="bio content">
+                    <!-- Title -->
+                    <p class="sans"><b>{{member.get_role_display}}</b></p>
+                    <!-- Name -->
+                    <p class="sans pad-down smaller"><i>{{member.surname}} {{member.name}}</i></p>
+                    <!-- Description -->
+                    <p>{{member.member_bio}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+</body>
+
+{% include "main/footer.html" %}
+
+</html>

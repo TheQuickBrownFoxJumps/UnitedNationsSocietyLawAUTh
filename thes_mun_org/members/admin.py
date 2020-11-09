@@ -44,7 +44,7 @@ class BoardMemberAdmin(admin.ModelAdmin):
         ('Identification', {'fields': ['surname', 'name', 'sex']}),
         ('Social Media', {'fields': ['social_url']}),
         ('Profile Pic', {'fields': ['member_pic']}),
-        ('Education Background and MUN Experience', {'fields': ['member_bio']}),
+        ('Bio', {'fields': ['member_bio']}),
     ]
 
     list_display = ('role', 'surname', 'name')

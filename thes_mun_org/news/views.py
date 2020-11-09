@@ -33,7 +33,7 @@ class NewsView(ListView):
         if query:
             news = self.model.objects.filter(title__icontains=query)
         else:
-            news = self.model.objects.all()
+            news = self.model.objects.all().order_by('-date')
         return news
 
 

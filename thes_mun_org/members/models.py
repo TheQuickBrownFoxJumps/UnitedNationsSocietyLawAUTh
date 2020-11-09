@@ -155,9 +155,9 @@ class BoardMember(models.Model):
     class Roles(models.TextChoices):
         PRESIDENT = 'P', _('President')
         VICE_PRESIDENT = 'VP', _('Vice-President')
-        SECRETARY_GENERAL = 'SG', _('Secretary General')
+        SECRETARY_GENERAL = 'SG', _('Secretary-General')
         TREASURER = 'TR', _('Treasurer')
-        ALTERNATE = 'AL', _('Alternate')
+        ALTERNATE = 'AL', _('Director for Communications and Merketing')
 
     class Sex(models.TextChoices):
         MALE = 'M', _('Male')
@@ -178,13 +178,13 @@ class BoardMember(models.Model):
     member_pic = models.ImageField(
         null=True,
         blank=True,
-        upload_to='media/members/members_pic',
-        default='media/members/members_pic/default_profile_pic.jpg', )
+        upload_to='members/members_pic',
+        default='test.png', )
     # Board member role
     role = models.CharField(
         max_length=2,
         choices=Roles.choices,
-        default=Roles.ALTERNATE, )
+        unique=True)
     # Social media link
     social_url = models.URLField(max_length=200, default='www')
     # Bio (available for public)
