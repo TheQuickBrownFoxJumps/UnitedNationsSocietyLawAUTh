@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500&display=swap" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'material/css/main.css' %}">
+</head>
+
+{% include "main/navbar.html" %}
+
+<body>
+    <article class="content container">
+        <h2 class="small-caps">{{ event.title }}</h2>
+
+        <img class="fit " src="{{event.image.url}}" alt="" srcset="">
+        <div class="date align-left red-bottom">{{event.date|date:"F d, Y"}}</div>
+
+        <p>{{ event.content }}</p>
+    </article>
+</body>
+
+{% include "main/footer.html" %}
+
+</html>

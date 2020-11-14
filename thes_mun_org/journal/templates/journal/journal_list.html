@@ -4,7 +4,7 @@
 {% load static %}
 
 <head>
-    <title>News</title>
+    <title>Journal</title>
 <!--		<link rel="stylesheet" type="text/css" href="main.css">-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,22 +21,21 @@
 
 <body>
     <div id="main" class="container content">
-        <div class="parallax"></div>
-    <h2 class="sans-small-caps bigger">News</h2>
+    <h2 class="sans-small-caps bigger">Journal</h2>
     <div class="news-posts">
-        {% for new in news %}
+        {% for journals in journal %}
             <div class="post">
                 <div class="img-container">
-                    <a href="{% url 'news:news-detail' new.pk %}" class="hover-link">
-                        <h2 class="post-title small-caps">{{new.title}}</h2>
-                        <p class="date ">{{new.date|date:"F d, Y"}}</p>
+                    <a href="{% url 'journal:journal-detail' journals.pk %}" class="hover-link">
+                        <h2 class="post-title small-caps">{{journals.title}}</h2>
+                        <p class="date ">{{journals.date|date:"F d, Y"}}</p>
                     </a>
                 </div>
 
-                <a href="{% url 'news:news-detail' new.pk %}" class="hover-link">
+                <a href="{% url 'journal:journal-detail' journals.pk %}" class="hover-link">
                     <div class="disc">
-                        <img class="post-img" src="{{new.image.url}}"  />
-                        <p class="disc-txt">{{new.content}}</p>
+                        <img class="post-img" src="{{journals.image.url}}"  />
+                        <p class="disc-txt">{{journals.content}}</p>
                     </div>
                 </a>
             </div>
@@ -98,4 +97,3 @@
 
 {% include "main/footer.html" %}
 
-</html>

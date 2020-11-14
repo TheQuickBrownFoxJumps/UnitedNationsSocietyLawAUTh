@@ -1,7 +1,7 @@
 from django.urls import path, include, re_path
 from . import views
 
-app_name = 'news'
+app_name = 'events'
 
 urlpatterns = [
     path('', views.EventsView.as_view(), name='events-list'),

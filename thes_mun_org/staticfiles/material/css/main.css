@@ -878,18 +878,19 @@ section {
 
 .portrait-container {
 	position: relative;
-	border-radius: 50%;
+	border-radius: 80%;
+	height: 30rem;
+	width: 30rem;
 	/* display: flex; */
 	/* align-items: center; */
 }
 
 .portrait {
-
 	/* background-image: url(/images/pepe02.jpg); */
 	/* background-repeat: no-repeat; */
-	border-radius: 50%;
-	height: 15rem;
-	width: 15rem;
+	border-radius: 80%;
+	height: 45rem;
+	width: 45rem;
 }
 
 .icon {

@@ -4,6 +4,7 @@
 {% load static %}
 
 <head>
+    <title>Board</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -19,14 +20,17 @@
 {% include "main/navbar.html" %}
 
 <body>
+    <div class="container content">
+    <h2 class="sans-small-caps content bigger">Board Members</h2>
+    </div>
     {% for member in boardmember %}
-    <div class="container">
+<!--    <div class="container">-->
         <div class="portraits-container ">
             <div class="person-container">
                 <a class="round" href="">
                     <div class="portrait-container">
                         <!-- Image path here for portrait -->
-                        <img src="{{member.member_pic.url}}" class="portrait"></img>
+                        <img src="{{member.member_pic.url}}" class="portrait">
                         <!-- Image path here for linkedin icon -->
                         <img class="icon" src="{% static 'material/imgs/linkedin-square.svg' %}" alt="">
                     </div>
@@ -42,7 +46,6 @@
                 </div>
             </div>
         </div>
-    </div>
     {% endfor %}
 
 </body>

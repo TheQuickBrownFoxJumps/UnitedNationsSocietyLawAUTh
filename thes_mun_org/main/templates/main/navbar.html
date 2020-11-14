@@ -17,7 +17,6 @@
 
 </head>
 <body>
-
     <div>
 
         <img class="logo" src="{% static 'material/imgs/logo.svg' %}" alt="" srcset="">
@@ -41,14 +40,14 @@
                     <a class=" droppee nav-link" >About us</a>
                     <ul>
                         <li class="push find"><a class="nav-link" href="{% url 'about-us' %}">Our Society</a></li>
-                        <li class="push"><a class="nav-link" href="{% url 'partners:partners-list' %}">Our Patrons</a></li>
+                        <li class="push"><a class="nav-link" href="{% url 'partners:partners-list' %}">Our Partners</a></li>
                     </ul>
                 </li>
                 <li><a class="nav-link" href="{% url 'members:board-list' %}">The Board</a></li>
                 <li><a class="nav-link" href="{% url 'news:news-list' %}">News</a></li>
-                <li><a class="nav-link" href="#">Events</a></li>
-                <li><a class="nav-link" href="#">Journal</a></li>
-                <li><a class="nav-link" href="#">Membership</a></li>
+                <li><a class="nav-link" href="{% url 'events:events-list' %}">Events</a></li>
+                <li><a class="nav-link" href="{% url 'journal:journal-list' %}">Journal</a></li>
+                <li><a class="nav-link" href="{% url 'membership' %}">Membership</a></li>
                 <li><a class="nav-link" href="{% url 'contact' %}">Contact Us</a></li>
 
                 </ul>
