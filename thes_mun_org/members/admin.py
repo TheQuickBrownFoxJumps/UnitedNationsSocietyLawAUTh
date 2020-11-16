@@ -41,8 +41,8 @@ class MemberAdmin(admin.ModelAdmin):
 class BoardMemberAdmin(admin.ModelAdmin):
     fieldsets = [
         ('Board Member Role', {'fields': ['role']}),
-        ('Identification', {'fields': ['surname', 'name', 'sex']}),
-        ('Social Media', {'fields': ['social_url']}),
+        ('Identification', {'fields': ['name', 'surname', 'sex']}),
+        ('Social Media', {'fields': ['social_url', 'email_url']}),
         ('Profile Pic', {'fields': ['member_pic']}),
         ('Bio', {'fields': ['member_bio']}),
     ]

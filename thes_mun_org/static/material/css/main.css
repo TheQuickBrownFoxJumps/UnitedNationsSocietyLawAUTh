@@ -8,6 +8,10 @@ html {
 	scroll-behavior: smooth;
 }
 
+.test1 {
+    position: absolute;
+    bottom: 100%;
+}
 
 body {
 	height: 100%;
@@ -16,33 +20,69 @@ body {
 	margin: 0;
 	padding: 0;
 	border: 0;
-
 }
+/*
+.inner {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+*/
 
-.parallax {
-	background-image: url("../imgs/parallax.jpg");
+.parallax-sides {
+	margin-bottom: 5rem;
 
 	z-index: -9999;
 	position: absolute;
 
-	height: 300% !important;
+
 	width: 100%;
 
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	overflow: hidden;
 }
 
-.parallax2 {
-	background-image: url("../imgs/parallax.jpg");
-	height: 50%;
+.parallax-head {
 
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
   }
+
+.parallax-news-sides {
+    background-image: url("../imgs/parallax.jpg");
+    height: 300rem;
+}
+
+.parallax-news-head {
+    background-image: url("../imgs/parallax.jpg");
+    height: 35%;
+}
+
+.parallax-events-sides {
+    background-image: url("../imgs/parallax.jpg");
+    height: 300%;
+}
+
+.parallax-events-head {
+    background-image: url("../imgs/parallax.jpg");
+    height: 35%;
+}
+
+.parallax-journal-sides {
+    background-image: url("../imgs/parallax.jpg");
+    height: 300%
+}
+
+.parallax-journal-head {
+    background-image: url("../imgs/parallax.jpg");
+    height: 35%;
+}
 
 .footer-link {
 	color: white !important;
@@ -144,13 +184,15 @@ button {
     margin-left: auto;
 	margin-right: auto;
 	width: 70%;
-	max-width: 65rem !important;
+	max-width: 90rem;
 	/* min-width: 100%; */
 	justify-content: center;
 	align-items: center;
 	margin-top: 3rem;
-	padding: 0rem 2rem 0rem 2rem;
+	padding: 4rem 7rem 3rem 7rem;
 	/* line-height: 1.5; */
+
+	overflow: hidden;
 }
 
 .faq {
@@ -358,7 +400,7 @@ button {
 
 h2 {
 	/* text-align: center; */
-	padding-top: 2em;
+
 	/* padding-bottom: 1em; */
 	font-weight: 400;
 	font-style: italic;
@@ -869,7 +911,7 @@ news-txt {
 	margin-right: auto;
 	/* flex-wrap: wrap; */
 	/* justify-content: last baseline !important; */
-	/* align-items: center; */
+    /*align-items: center;*/
 	padding-bottom: 3rem;
 }
 
@@ -925,7 +967,7 @@ news-txt {
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
-	padding: 2rem;
+	padding: 2rem 0rem 2rem 2rem;
 }
 
 .portrait-container {
@@ -975,8 +1017,9 @@ news-txt {
 
 
 .bio {
-	width:40%;
-	padding: 1rem;
+	font-size: 95% !important;
+	width: 42%;
+	padding: 0rem 0rem 1rem 1rem;
 	padding-left: 4rem;
 }
 
@@ -1124,6 +1167,8 @@ button {
 .navbar-container {
 	display: flex;
 	/* flex-wrap: wrap; */
+    background-color: #fff;
+    margin-bottom: 2rem;
 }
 
 .push {
@@ -1386,7 +1431,15 @@ ul li:hover ul {
 
 @media only screen and (max-width: 2160x) {
 	.container {
-		max-width: 90rem;
+		max-width: 120rem;
+	}
+
+	.content {
+		font-size: 1.8rem;
+	}
+
+	.bio {
+		font-size: 100%;
 	}
 }
 
@@ -1397,6 +1450,10 @@ ul li:hover ul {
 		width: 90% ;
 		flex-direction: column;
 		padding: 1rem 0 2rem 0;
+	}
+
+    .bio {
+		width: 70%;
 	}
 
 	.column {
@@ -1483,7 +1540,17 @@ ul li:hover ul {
 
 		width: 150px;
 	}
+
 }
+
+@media only screen and (max-height: 930px) {
+
+    .parallax-sides {
+		display: none;
+		/* background-attachment: scroll; */
+	}
+
+	}
 
 @media only screen and (max-width: 1220px) {
 
@@ -1499,12 +1566,12 @@ ul li:hover ul {
 		font-size: 1.24em ;
 	} */
 
-	.parallax {
+	.parallax-sides {
 		display: none;
 		/* background-attachment: scroll; */
 	}
 
-	.parallax2 {
+	.parallax-head {
 		background-attachment: scroll;
 	}
 
@@ -1570,7 +1637,7 @@ ul li:hover ul {
 
 	.bio {
 		align-self: center;
-		text-align: center;
+		/* text-align: center; */
 	}
 
 	.person-container {
@@ -1643,20 +1710,36 @@ ul li:hover ul {
         padding-right: 0;
 	}
 
+	.portrait {
+		height: 20rem;
+		width: 20rem;
+	}
+
+	.container {
+		padding: 0;
+	}
+
 }
 
 @media only screen and (max-width: 800px) {
 
 	.content {
-		-webkit-hyphens: auto;
+		/*-webkit-hyphens: auto;
 		    -ms-hyphens: auto;
-		        hyphens: auto;
+		        hyphens: auto;*/
 		padding-left: 0.5rem;
 		padding-right: 0.5rem;
 	}
+
+	.smaller {
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+	}
+
 	.about-container {
 		width: 100%;
 	}
+
 	.container {
 		width: 100%;
 	}
@@ -1784,6 +1867,7 @@ ul li:hover ul {
 	}
 
 	.bio {
+	    font-size: 95%;
 		width: 100%;
 		padding-left: 0.5rem;
 	}

@@ -41,8 +41,10 @@
                     <p class="sans"><b>{{member.get_role_display}}</b></p>
                     <!-- Name -->
                     <p class="sans pad-down smaller"><i>{{member.surname}} {{member.name}}</i></p>
+                    <!-- Contact -->
+                    <p class="sans pad-down smaller"><i>Contact: {{ member.email_url }}</i></p>
                     <!-- Description -->
-                    <p>{{member.member_bio}}</p>
+                    <p>{{member.member_bio|linebreaksbr}}</p>
                 </div>
             </div>
         </div>

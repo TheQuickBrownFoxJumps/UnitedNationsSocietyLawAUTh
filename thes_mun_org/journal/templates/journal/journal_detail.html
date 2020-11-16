@@ -20,13 +20,16 @@
 {% include "main/navbar.html" %}
 
 <body>
+    <div class="parallax-journal-head"></div>
     <article class="content container">
+        <div class="parallax-journal-sides"></div>
         <h2 class="small-caps">{{ journals.title }}</h2>
 
-        <img class="fit " src="{{journals.image.url}}" alt="" srcset="">
+        <img class="fit " src="{{journals.image_detail.url}}" alt="" srcset="">
         <div class="date align-left red-bottom">{{journals.date|date:"F d, Y"}}</div>
 
-        <p>{{ journals.content }}</p>
+        <p>{{ journals.content|linebreaksbr }}</p>
+        <a href="{{ journals.href_url }}">{{ journals.href_url }}</a>
     </article>
 </body>
 

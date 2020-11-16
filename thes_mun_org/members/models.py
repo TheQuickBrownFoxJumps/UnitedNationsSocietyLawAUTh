@@ -187,6 +187,8 @@ class BoardMember(models.Model):
         unique=True)
     # Social media link
     social_url = models.URLField(max_length=200, default='www')
+    # Mail link
+    email_url = models.EmailField(default="", help_text='Test')
     # Bio (available for public)
     member_bio = models.TextField(verbose_name='Experiences', max_length='1000', default='(will be public)')
     # Model DB History

@@ -20,13 +20,17 @@
 {% include "main/navbar.html" %}
 
 <body>
+    <div class="parallax-news-head"></div>
     <article class="content container">
+        <div class="parallax-news-sides"></div>
         <h2 class="small-caps">{{ new.title }}</h2>
 
-        <img class="fit " src="{{new.image.url}}" alt="" srcset="">
+        <img class="fit " src="{{new.image_detail.url}}" alt="" srcset="">
         <div class="date align-left red-bottom">{{new.date|date:"F d, Y"}}</div>
 
-        <p>{{ new.content }}</p>
+        <p>{{ new.content|linebreaksbr }}</p>
+        <a href="{{ new.href_url }}">{{ new.href_url }}</a>
+
     </article>
 </body>
 

@@ -20,27 +20,28 @@
 {% include "main/navbar.html" %}
 
 <body>
+    <div class="parallax-journal-head"></div>
     <div id="main" class="container content">
+    <div class="parallax-journal-sides"></div>
     <h2 class="sans-small-caps bigger">Journal</h2>
     <div class="news-posts">
         {% for journals in journal %}
             <div class="post">
                 <div class="img-container">
-                    <a href="{% url 'journal:journal-detail' journals.pk %}" class="hover-link">
+                    <a href="{% url 'journal:journal-detail' journals.slug %}" class="hover-link">
                         <h2 class="post-title small-caps">{{journals.title}}</h2>
                         <p class="date ">{{journals.date|date:"F d, Y"}}</p>
                     </a>
                 </div>
 
-                <a href="{% url 'journal:journal-detail' journals.pk %}" class="hover-link">
+                <a href="{% url 'journal:journal-detail' journals.slug %}" class="hover-link">
                     <div class="disc">
                         <img class="post-img" src="{{journals.image.url}}"  />
-                        <p class="disc-txt">{{journals.content}}</p>
+                        <p class="disc-txt">{{journals.content|linebreaksbr}}</p>
                     </div>
                 </a>
             </div>
         {% endfor %}
-    </div>
     </div>
 <!--
                 {% for new in news %}
@@ -81,6 +82,7 @@
             {% endif %}
 
     {% endif %}
+    </div>
     </div>
     </div>
 </body>

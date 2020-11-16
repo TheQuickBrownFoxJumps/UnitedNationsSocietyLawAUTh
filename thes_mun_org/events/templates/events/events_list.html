@@ -20,27 +20,28 @@
 {% include "main/navbar.html" %}
 
 <body>
+    <div class="parallax-head parallax-events-head"></div>
     <div id="main" class="container content">
+    <div class="parallax-sides parallax-events-sides"></div>
     <h2 class="sans-small-caps bigger">Events</h2>
     <div class="news-posts">
         {% for event in events %}
             <div class="post">
                 <div class="img-container">
-                    <a href="{% url 'events:events-detail' event.pk %}" class="hover-link">
+                    <a href="{% url 'events:events-detail' event.slug %}" class="hover-link">
                         <h2 class="post-title small-caps">{{event.title}}</h2>
                         <p class="date ">{{event.date|date:"F d, Y"}}</p>
                     </a>
                 </div>
 
-                <a href="{% url 'events:events-detail' event.pk %}" class="hover-link">
+                <a href="{% url 'events:events-detail' event.slug %}" class="hover-link">
                     <div class="disc">
                         <img class="post-img" src="{{event.image.url}}"  />
-                        <p class="disc-txt">{{event.content}}</p>
+                        <p class="disc-txt">{{event.content|linebreaksbr}}</p>
                     </div>
                 </a>
             </div>
         {% endfor %}
-    </div>
     </div>
 <!--
                 {% for new in news %}
@@ -81,6 +82,7 @@
             {% endif %}
 
     {% endif %}
+    </div>
     </div>
     </div>
 </body>

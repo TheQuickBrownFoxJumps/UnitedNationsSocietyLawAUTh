@@ -20,13 +20,16 @@
 {% include "main/navbar.html" %}
 
 <body>
+    <div class="parallax-events-head"></div>
     <article class="content container">
+    <div class="parallax-events-sides"></div>
         <h2 class="small-caps">{{ event.title }}</h2>
 
-        <img class="fit " src="{{event.image.url}}" alt="" srcset="">
+        <img class="fit " src="{{event.image_detail.url}}" alt="" srcset="">
         <div class="date align-left red-bottom">{{event.date|date:"F d, Y"}}</div>
 
-        <p>{{ event.content }}</p>
+        <p>{{ event.content|linebreaksbr }}</p>
+        <a href="{{ event.href_url }}">{{ event.href_url }}</a>
     </article>
 </body>
 
