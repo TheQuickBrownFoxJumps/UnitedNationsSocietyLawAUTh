@@ -21,81 +21,58 @@
 
 <body>
     <div class="parallax-head parallax-news-head"></div>
-    <div id="main" class="container content">
-    <div class="parallax-sides parallax-news-sides"></div>
-    <h2 class="sans-small-caps bigger">News</h2>
-    <div class="news-posts">
-        {% for new in news %}
-            <div class="post">
-                <div class="img-container">
-                    <a href="{% url 'news:news-detail' new.slug %}" class="hover-link">
-                        <h2 class="post-title small-caps">{{new.title}}</h2>
-                        <p class="date ">{{new.date|date:"F d, Y"}}</p>
-                    </a>
+    <div class="parallax-wrapper">
+        <div id="main" class="container content">
+            <div class="parallax-sides parallax-news-sides"></div>
+                <h2 class="sans-small-caps bigger">News</h2>
+                <div class="news-posts">
+                    {% for new in news %}
+                        <div class="post">
+                            <div class="img-container">
+                                <a href="{% url 'news:news-detail' new.slug %}" class="hover-link">
+                                    <h2 class="post-title small-caps">{{new.title}}</h2>
+                                    <p class="date ">{{new.date|date:"F d, Y"}}</p>
+                                </a>
+                            </div>
+
+                            <a href="{% url 'news:news-detail' new.slug %}" class="hover-link">
+                                <div class="disc">
+                                    <img class="post-img" src="{{new.image.url}}"  />
+                                    <p class="disc-txt">{{new.content|linebreaksbr}}</p>
+                                </div>
+                            </a>
+                        </div>
+                    {% endfor %}
                 </div>
 
-                <a href="{% url 'news:news-detail' new.slug %}" class="hover-link">
-                    <div class="disc">
-                        <img class="post-img" src="{{new.image.url}}"  />
-                        <p class="disc-txt">{{new.content|linebreaksbr}}</p>
+            <!-- pagination -->
+                <div id="peg" class="container content red-bottom">
+                    <div class="pagination small-caps">
+                        {% if is_paginated %}
+
+                            {% if page_obj.has_previous %}
+                                <a class="hover-link previous" href="?page=1">First</a>
+                                <a class="hover-link previous" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+                            {% endif %}
+
+                            {% for num in page_obj.paginator.page_range %}
+                                {% if page_obj.number == num %}
+                                    <a class="hover-link page active" href="?page={{ num }}">{{ num }}</a>
+                                {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+                                    <a class="hover-link page" href="?page={{ num }}">{{ num }}</a>
+                                {% endif %}
+                            {% endfor %}
+
+                            {% if page_obj.has_next %}
+                                <a class="hover-link next" href="?page={{ page_obj.next_page_number }}">Next</a>
+                                <a class="hover-link next" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+                            {% endif %}
+                        {% endif %}
                     </div>
-                </a>
-            </div>
-        {% endfor %}
-    </div>
-<!--
-                {% for new in news %}
-                <div class="card my-3">
-
-                <div class="card-header"><a href="{% url 'news:news-detail' new.pk %}" class="text-dark">{{new.title}}</a></div>
-                <div class="card-body">
-                 <h4 class="card-title">{{post.author}}</h4>
-                    <p class="card-title">{{post.content}}</p>
-                    <p>{{new.author}}</p>
-                    <p>{{new.date|date:"F d, Y"}}</p>
                 </div>
-            </div>
-
-
-            {% endfor %}
--->
-<!-- pagination -->
-    <div id="peg" class="container content red-bottom">
-    <div class="pagination small-caps">
-    {% if is_paginated %}
-
-        {% if page_obj.has_previous %}
-            <a class="hover-link previous" href="?page=1">First</a>
-            <a class="hover-link previous" href="?page={{ page_obj.previous_page_number }}">Previous</a>
-        {% endif %}
-
-        {% for num in page_obj.paginator.page_range %}
-            {% if page_obj.number == num %}
-            <a class="hover-link page active" href="?page={{ num }}">{{ num }}</a>
-            {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
-            <a class="hover-link page" href="?page={{ num }}">{{ num }}</a>
-            {% endif %}
-        {% endfor %}
-            {% if page_obj.has_next %}
-            <a class="hover-link next" href="?page={{ page_obj.next_page_number }}">Next</a>
-            <a class="hover-link next" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
-            {% endif %}
-
-    {% endif %}
-    </div>
-    </div>
+        </div>
     </div>
 </body>
-
-<!--<a href="#" class="hover-link previous">Prev</a>-->
-<!--									<a href="#" class="hover-link page active">1</a>-->
-<!--									<a href="#" class="hover-link page">2</a>-->
-<!--									<a href="#" class="hover-link page">3</a>-->
-<!--									<span class="extra">&hellip;</span>-->
-<!--									<a href="#" class="hover-link page">8</a>-->
-<!--									<a href="#" class="hover-link page">9</a>-->
-<!--									<a href="#" class="hover-link page">10</a>-->
-<!--									<a href="#" class="hover-link next">Next</a>-->
 
 {% include "main/footer.html" %}
 

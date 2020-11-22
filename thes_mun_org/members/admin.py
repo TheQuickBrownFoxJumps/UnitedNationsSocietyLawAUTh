@@ -5,7 +5,7 @@ from django.contrib import admin
 from django.utils import timezone
 from django.utils.html import format_html
 from django.utils.safestring import mark_safe
-from .models import Member, BoardMember
+from .models import Member, BoardMember, AssociateMember
 import string
 
 
@@ -52,5 +52,19 @@ class BoardMemberAdmin(admin.ModelAdmin):
     search_fields = ['surname', 'name']
 
 
+class AssociateMemberAdmin(admin.ModelAdmin):
+    fieldsets = [
+        ('Identification', {'fields': ['name', 'surname', 'sex', 'birth_date']}),
+        ('Date Created', {'fields': ['init_date']}),
+        ('Communication', {'fields': ['mail', 'phone']}),
+        ('Education background and MUN experience', {'fields': ['education_background', 'mun_exp_bio']}),
+    ]
+
+    list_display = ('surname', 'name', 'sex', 'education_background', 'created_years_ago',)
+    list_filter = [AlphabetFilter, 'init_date', 'sex', 'education_background']
+    search_fields = ['surname', 'name']
+
+
 admin.site.register(BoardMember, BoardMemberAdmin)
 admin.site.register(Member, MemberAdmin)
+admin.site.register(AssociateMember, AssociateMemberAdmin)

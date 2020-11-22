@@ -32,49 +32,8 @@
 {% include "main/navbar.html" %}
 
 <body>
-
+<div class="wrapper">
     <button onclick="topFunction()" id="widget" class="fa fa-arrow-up" title="Go to top"></button>
-
-            <!-- <img class="logo" src="/images/logo.svg" alt="" srcset="">
-            <div class="navbar-container">
-                <nav class="smaller sans-small-caps ">
-                    <div class="ham-container ">
-                        <button class="hamburger hamburger--vortex" type="button">
-                            <span class="hamburger-box">
-                            <span class="hamburger-inner"></span>
-                            </span>
-                        </button>
-                    </div>
-
-                    <ul>
-                    <li>
-                        <a class="nav-link" href="#">Home</a>
-
-                    </li>
-                    <li>
-                        <a class=" droppee nav-link" >About us</a>
-                        <ul>
-                            <li class="push find"><a class="nav-link" href="#">Organization</a></li>
-                            <li class="push"><a class="nav-link" href="#">Organization</a></li>
-                            <li class="push"><a class="nav-link" href="#">Organization</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="nav-link" href="#">I'm so done</a></li>
-                    <li><a class="nav-link" href="#">I'm so done</a></li>
-                    <li><a class="nav-link" href="#">I'm so done</a></li>
-                    <li>
-                        <a class="droppee nav-link" >With the</a>
-                        <ul>
-                            <li class="push find"><a class="nav-link" href="#">Fucking</a></li>
-                            <li class="push"><a class="nav-link" href="#">Bullshit</a></li>
-                            <li class="push"><a class="nav-link" href="#">Checkbox "Hack"</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="nav-link" href="#">Bitch Ass</a></li>
-                    <li><a class="nav-link" href="#">Contact Us</a></li>
-                    </ul>
-                </nav>
-            </div> -->
 
             <div id="node-top">
 
@@ -85,7 +44,7 @@
 
                         <div class="content-nav small-caps">
                             <a href="#node-goals" class="">
-                                <div class="item content small-caps"> Our Goals</div>
+                                <div class="item content small-caps"> Our Goals&nbsp</div>
                             </a>
 
                             <a href="#node-events" class="">
@@ -137,9 +96,10 @@
                                 excepturi deleniti nesciunt beatae quae repellat non, voluptate modi adipisci nobis ratione esse enim laborum.</p>
                         </div>
 
-                        <button style="background-color: darkred; width:70%;"
+                        <form action="{% url 'about-us' %}">
+                        <input style="background-color: darkred; width:100%;"
                         type="submit" class="small-caps pure-button pure-u-1 pure-button-primary pure-black hover-link pad smaller"
-                        >Learn More About Us</button>
+                        value="Learn More About Us"/></form>
 
                 </section>
             </div>
@@ -151,25 +111,15 @@
                 <br>
                 {% for event in events|slice:"0:3" %}
                     <div class="news-container hover-link">
-                        <a href="#" class="fit">
+                        <a href="{% url 'events:events-detail' event.slug %}" class="fit">
                             <div class="fit">
                                 <img class="news-image" src="{{event.image.url}}" alt="">
-                                    <p class="news-p content smaller">{{event.content}}</p>
+                                    <p class="news-p content smaller">{{event.title}}</p>
                             </div>
                         </a>
                      </div>
                 {% endfor %}
             </div>
-<!--                <div class="news-container hover-link">-->
-<!--                    <a href="#" class="fit">-->
-<!--                        <div class="fit">-->
-<!--                            <img class="news-image" src="{% static 'material/imgs/pic06.jpg' %}" alt="">-->
-<!--                            <p class="news-p content smaller">-->
-<!--                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius recusar architecto fugiat aliquam iste placeat quam. Quisquam!-->
-<!--                            </p>-->
-<!--                        </div>-->
-<!--                    </a>-->
-<!--                </div>-->
 
             <div class="md-container-simple" id="node-news">
                 <h3 class="mid">Latest News</h3>
@@ -178,7 +128,7 @@
                 {% for new in news|slice:"0:3" %}
 <!--                <div class="md-container-vertical">-->
                     <div class="news-container-vertical hover-link">
-                        <a href="{% url 'news:news-detail' new.pk %}" class="">
+                        <a href="{% url 'news:news-detail' new.slug %}" class="">
                             <div class="">
                                 <img class="news-image-vertical" src="{{new.image.url}}" alt="">
                                 <p class="news-p content smaller">{{new.title}}</p>
@@ -288,9 +238,8 @@
         document.body.scrollTop = 0; // For Safari
         document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         }
-
-
     </script>
+    </div>
 </body>
 
 {% include "main/footer.html" %}

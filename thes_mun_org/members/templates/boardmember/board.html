@@ -27,7 +27,7 @@
 <!--    <div class="container">-->
         <div class="portraits-container ">
             <div class="person-container">
-                <a class="round" href="">
+                <a class="round" href="{{member.social_url}}">
                     <div class="portrait-container">
                         <!-- Image path here for portrait -->
                         <img src="{{member.member_pic.url}}" class="portrait">
@@ -38,13 +38,13 @@
 
                 <div class="bio content">
                     <!-- Title -->
-                    <p class="sans"><b>{{member.get_role_display}}</b></p>
+                    <p class="sans smaller"><b>{{member.get_role_display}}</b></p>
                     <!-- Name -->
                     <p class="sans pad-down smaller"><i>{{member.surname}} {{member.name}}</i></p>
                     <!-- Contact -->
                     <p class="sans pad-down smaller"><i>Contact: {{ member.email_url }}</i></p>
                     <!-- Description -->
-                    <p>{{member.member_bio|linebreaksbr}}</p>
+                    <p class="smaller">{{member.member_bio|linebreaksbr}}</p>
                 </div>
             </div>
         </div>

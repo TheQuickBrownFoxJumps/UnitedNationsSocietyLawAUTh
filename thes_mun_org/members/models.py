@@ -190,6 +190,58 @@ class BoardMember(models.Model):
     # Mail link
     email_url = models.EmailField(default="", help_text='Test')
     # Bio (available for public)
-    member_bio = models.TextField(verbose_name='Experiences', max_length='1000', default='(will be public)')
+    member_bio = models.TextField(verbose_name='Experiences', max_length=2000, default='(will be public)')
     # Model DB History
     history = HistoricalRecords()
+
+
+class AssociateMember(models.Model):
+    class EducationBackground(models.TextChoices):
+        UNDERGRADUATE = 'UG', _('Undergraduate')
+        POSTGRADUATE = 'PG', _('Postgraduate')
+        GRADUATE = 'GR', _('Graduate')
+        OTHER = 'OT', _('Other')
+
+    class Sex(models.TextChoices):
+        MALE = 'M', _('Male')
+        FEMALE = 'F', _('Female')
+        OTHER = 'O', _('Other')
+
+    # Name
+    name = models.CharField(max_length=128, default='No name given')
+    # Surname
+    surname = models.CharField(max_length=128, default='No surname given')
+    # Birth day
+    birth_date = models.DateTimeField('birth day')
+    # Primary key
+    id = models.AutoField(primary_key=True)
+    # Member e-mail
+    mail = models.EmailField(max_length=254)
+    # Member sex-gender
+    sex = models.CharField(
+        max_length=2,
+        choices=Sex.choices,
+        default=Sex.OTHER,
+    )
+    # Member educational background
+    education_background = models.CharField(
+        max_length=2,
+        choices=EducationBackground.choices,
+        default=EducationBackground.OTHER,
+    )
+    # Member phone
+    phone = models.CharField(max_length=128, default='No phone given')
+    # Sign up date for member
+    init_date = models.DateTimeField('date created')
+    # A brief biography and MUN experience
+    mun_exp_bio = models.TextField(verbose_name='Experience', max_length=500, default='No bio given.')
+    # Model DB History
+    history = HistoricalRecords()
+
+    def created_years_ago(self):
+        now = timezone.now()
+        return now - datetime.timedelta(days=365) >= self.init_date
+
+    created_years_ago.admin_order_field = 'init_date'
+    created_years_ago.boolean = True
+    created_years_ago.short_description = 'More than one year?'

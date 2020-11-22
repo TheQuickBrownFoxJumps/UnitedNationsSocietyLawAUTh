@@ -21,14 +21,23 @@ body {
 	padding: 0;
 	border: 0;
 }
-/*
+
 .inner {
-  position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
 }
-*/
+
+.wrapper{
+    min-height:100%;
+    margin-bottom: -50px;
+}
+
+.parallax-wrapper {
+    position: relative;
+    overflow: hidden;
+    padding-top: 15rem;
+}
 
 .parallax-sides {
 	margin-bottom: 5rem;
@@ -52,21 +61,23 @@ body {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	height: 100%;
+	display: none;
   }
 
 .parallax-news-sides {
-    background-image: url("../imgs/parallax.jpg");
-    height: 300rem;
+    background-image: url("../imgs/book2.jpg");
+    height: 400%;
 }
 
 .parallax-news-head {
-    background-image: url("../imgs/parallax.jpg");
+    background-image: url("../imgs/book2.jpg");
     height: 35%;
 }
 
 .parallax-events-sides {
     background-image: url("../imgs/parallax.jpg");
-    height: 300%;
+    height: 400%;
 }
 
 .parallax-events-head {
@@ -76,7 +87,7 @@ body {
 
 .parallax-journal-sides {
     background-image: url("../imgs/parallax.jpg");
-    height: 300%
+    height: 400%
 }
 
 .parallax-journal-head {
@@ -189,7 +200,8 @@ button {
 	justify-content: center;
 	align-items: center;
 	margin-top: 3rem;
-	padding: 4rem 7rem 3rem 7rem;
+	margin-bottom: 3rem;
+	padding: 4rem 4rem 3rem 4rem;
 	/* line-height: 1.5; */
 
 	overflow: hidden;
@@ -421,8 +433,8 @@ h3 {
 }
 
 .link:hover {
-	background: darkblue;
-	color: white;
+	background: white;
+	color: darkred;
 }
 
 .thin-border {
@@ -471,7 +483,7 @@ h3 {
 	justify-content: center;
 
 	height: 85vh;
-	background:linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4) ), url("../imgs/big_banner.jpg");
+	background:linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4) ), url("../imgs/big_banner_new.jpg");
 	background-position: center;
 	background-size: cover;
 }
@@ -479,7 +491,7 @@ h3 {
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
 	.banner {
-		background :linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../imgs/small_banner.jpg");
+		background :linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../imgs/small_banner_new.jpg");
 		background-position: center;
 		background-size: cover;
 	}
@@ -534,11 +546,35 @@ hr {
 	height: 30rem;
 }
 
-.image-block {
+.image-block1 {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../imgs/pic03.jpg");
+	background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../imgs/logo_JPG.jpg");
+	/* height: 20rem; */
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	border-right: solid 1px black;
+}
+
+.image-block2 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../imgs/about_us_3.jpg");
+	/* height: 20rem; */
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	border-right: solid 1px black;
+}
+
+.image-block3 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../imgs/shutterstock_Cropped.jpg");
 	/* height: 20rem; */
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -825,14 +861,13 @@ section {
 }
 
 .news-container {
-	width: 80%;
+	width: 50%;
 	padding: 2rem;
 	margin-bottom: 2rem;
 	margin-top: 1rem;
 }
 
 .news-image {
-	/* align-self: center; */
 	width: 100%;
 	height: 25rem;
 	margin-bottom: 2rem;
@@ -981,6 +1016,7 @@ news-txt {
 	border-radius: 50%;
 	height: 30rem;
 	width: 30rem;
+	margin-bottom: 1rem;
 }
 
 .icon {
@@ -1049,7 +1085,7 @@ news-txt {
 #footer {
     background-color: #111111;
     color: rgba(255, 255, 255, 0.5);
-    padding: 8rem 0 6rem 0;
+    padding: 2rem 0 1rem 0;
 }
 
 #footer input, #footer select, #footer textarea {
@@ -1168,7 +1204,8 @@ button {
 	display: flex;
 	/* flex-wrap: wrap; */
     background-color: #fff;
-    margin-bottom: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
 }
 
 .push {
@@ -1185,10 +1222,10 @@ button {
 
 	left: 5%;
 
-	padding: 2rem 0 0 0;
-	/* margin-left: 5%; */
-	height: 60px;
-	width: 200px;
+	padding: 0 0 0 0;
+	margin-top: -12rem;
+	height: 500px;
+	width: 500px;
 }
 
 nav {
@@ -1543,15 +1580,6 @@ ul li:hover ul {
 
 }
 
-@media only screen and (max-height: 930px) {
-
-    .parallax-sides {
-		display: none;
-		/* background-attachment: scroll; */
-	}
-
-	}
-
 @media only screen and (max-width: 1220px) {
 
 	/* .smaller {
@@ -1566,13 +1594,18 @@ ul li:hover ul {
 		font-size: 1.24em ;
 	} */
 
+    .parallax-wrapper {
+        padding-top: 1rem;
+    }
+
 	.parallax-sides {
 		display: none;
 		/* background-attachment: scroll; */
 	}
 
 	.parallax-head {
-		background-attachment: scroll;
+		/*background-attachment: scroll;*/
+		display: block;
 	}
 
 	.arrow {

@@ -15,11 +15,13 @@
 
     <link rel="stylesheet" href="{% static 'material/css/hamburger.css' %}">
 
+    <link rel="shortcut icon" type="image/jpg" href="{% static 'material/imgs/logo_JPG.png' %}"/>
+
 </head>
 <header>
     <div>
 
-        <img class="logo" src="{% static 'material/imgs/logo.svg' %}" alt="" srcset="">
+        <img class="logo" src="{% static 'material/imgs/logo_banner.svg' %}" alt="" srcset="">
         <div class="navbar-container">
 
             <nav class="smaller sans-small-caps ">
@@ -37,11 +39,12 @@
 
                 </li>
                 <li>
-                    <a class=" droppee nav-link" >About us</a>
-                    <ul>
-                        <li class="push find"><a class="nav-link" href="{% url 'about-us' %}">Our Society</a></li>
-                        <li class="push"><a class="nav-link" href="{% url 'partners:partners-list' %}">Our Partners</a></li>
-                    </ul>
+<!--                <a class="droppee nav-link" >About us</a>-->
+<!--                    <ul>-->
+<!--                        <li class="push find"><a class="nav-link" href="{% url 'about-us' %}">Our Society</a></li>-->
+<!--                        <li class="push"><a class="nav-link" href="{% url 'partners:partners-list' %}">Our Partners</a></li>-->
+<!--                    </ul>-->
+                <a class="nav-link" href="{% url 'about-us' %}">About us</a>
                 </li>
                 <li><a class="nav-link" href="{% url 'members:board-list' %}">The Board</a></li>
                 <li><a class="nav-link" href="{% url 'news:news-list' %}">News</a></li>
