@@ -38,7 +38,7 @@
                             <a href="{% url 'news:news-detail' new.slug %}" class="hover-link">
                                 <div class="disc">
                                     <img class="post-img" src="{{new.image.url}}"  />
-                                    <p class="disc-txt">{{new.content|linebreaksbr}}</p>
+                                    <p class="disc-txt">{{new.content|linebreaksbr|urlize|safe}}</p>
                                 </div>
                             </a>
                         </div>

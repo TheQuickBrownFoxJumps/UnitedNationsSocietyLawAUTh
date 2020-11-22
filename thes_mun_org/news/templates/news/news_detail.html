@@ -27,8 +27,9 @@
 
         <img class="fit " src="{{new.image_detail.url}}" alt="" srcset="">
         <div class="date align-left red-bottom">{{new.date|date:"F d, Y"}}</div>
-
-        <p>{{ new.content|linebreaksbr }}</p>
+        {% autoescape off %}
+            <p>{{ new.content|linebreaksbr|urlize }}</p>
+        {% endautoescape %}
         <a href="{{ new.href_url }}">{{ new.href_url }}</a>
 
     </article>
