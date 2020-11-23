@@ -23,18 +23,13 @@
 {% include "main/navbar.html" %}
 <body>
 
+    <button onclick="topFunction()" id="widget" class="fa fa-arrow-up" title="Go to top"></button>
 
-    <!-- <h2 class="sans-small-caps">Contacting Us</h2> -->
-    <div class="container content red-bottom">
-        <h2 class="sans-small-caps bigger">Membership</h2>
-
-        <!-- <img  src="/images/contact_us_b.jpg" alt="" class="dec-img "> -->
+    <div class="opening-container opening-membership content">
+        <h2 class="sans-small-caps content bigger opening-text">Membership</h2>
     </div>
 
-
     <div class="container faq content">
-
-<!--        <p>Before trying to contact us please consult the <a class="link" href="{% url 'about-us' %}">FAQ</a> page.</p>-->
 
         <h2 class="">According to Article 4 of our Constitution, UNSOC membership consists of Regular Members, Associate Members and Honorary Members. </h2>
         <p></p>
@@ -49,9 +44,9 @@
         <p>Honorary Membership is awarded for life by the Executive Board of UNSOC to individuals with outstanding contribution to the fields of diplomacy, international affairs or international law. Persons who have rendered meritorious service or significant financial support to UNSOC may also be granted the status of Honorary Member. In addition to paying no membership dues, Honorary Members enjoy the same benefits as Regular Members, except they have no voting privileges and may not hold office. </p>
         <br>
         <br>
-        <br>
         <p>If you are interested in joining UNSOC and fulfil the criteria of one of the membership types described above, please fill in this form with all relevant information about yourself. Note that an applying member must pay the annual membership fee of €10 before its membership is considered confirmed. After your application has been processed, you will receive an email with further instructions concerning the payment. For any inquiries, please feel free to contact us.</p>
     </div>
+    <script src="{% static '/material/js/button-widget.js' %}"></script>
 
 </body>
 {% include "main/footer.html" %}

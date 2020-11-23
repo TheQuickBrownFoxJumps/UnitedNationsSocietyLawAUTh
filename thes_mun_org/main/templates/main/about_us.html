@@ -14,9 +14,11 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500&display=swap" >
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 {% include "main/navbar.html" %}
 <body>
+    <button onclick="topFunction()" id="widget" class="fa fa-arrow-up" title="Go to top"></button>
 
     <div class="container content red-bottom">
         <h2 class="sans-small-caps white bigger" >About Us</h2>
@@ -59,7 +61,7 @@
 
     </div>
 
-    <div class="container content">
+    <!-- <div class="container content">
         <h2 class="content small-caps">Frequently Asked Questions</h2>
     </div>
     <div class="container red-bottom">
@@ -81,33 +83,10 @@
 
 
         <p class="content message">Have more questions? You can get in touch with us in <a class="link small-caps" href="{% url 'contact' %}">Contact Us</a> </p>
-    </div>
+    </div> -->
 
-    <script>
-        var acc = document.getElementsByClassName("accordion");
-        var i;
-
-        for (i = 0; i < acc.length; i++) {
-          acc[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var panel = this.nextElementSibling;
-
-            if (panel.style.maxHeight) {
-
-                panel.style.maxHeight = null;
-                setTimeout(() => {
-                    panel.classList.toggle("open-desc");
-                }, 150);
-
-            } else {
-                panel.style.maxHeight = panel.scrollHeight + 999  + "px";
-
-                panel.classList.toggle("open-desc");
-            }
-          });
-        }
-    </script>
-
+    <script src="{% static '/material/js/button-widget.js' %}"></script>
+    <script src="{% static '/material/js/accordion.js' %}"></script>
 
 </body>
 {% include "main/footer.html" %}
