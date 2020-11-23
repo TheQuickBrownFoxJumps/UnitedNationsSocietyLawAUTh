@@ -212,26 +212,13 @@ p {
 	background-size: cover;
 }
 
-/* .quote-pic {
-
-} */
 
 .quote-text {
 	color: #fff !important;
-	width: 70% ;
+	width: 40% ;
 	word-wrap: break-word;
-}
-
-/*
-.swiper-slide {
 	text-align: center;
-	font-size: 18px;
-	background: #fff;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-} */
+}
 
 .round {
 	border-radius: 50%;
