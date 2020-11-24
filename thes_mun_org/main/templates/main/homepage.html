@@ -108,7 +108,10 @@
                         <a href="{% url 'events:events-detail' event.slug %}" class="fit">
                             <div class="fit">
                                 <img class="news-image" src="{{event.image.url}}" alt="">
-                                    <p class="news-p content smaller">{{event.title}}</p>
+                                <div class="content">
+                                    <p class="date">{{event.date}}</p>
+                                    <p class="news-p">{{event.title}} </p>
+                                </div>
                             </div>
                         </a>
                      </div>
@@ -124,7 +127,10 @@
                         <a href="{% url 'news:news-detail' new.slug %}" class="">
                             <div class="">
                                 <img class="news-image-vertical" src="{{new.image.url}}" alt="">
-                                <p class="news-p content smaller">{{new.title}}</p>
+                                <div class="content">
+                                    <p class="date">{{new.date}}</p>
+                                    <p class="news-p">{{new.title}} </p>
+                                </div>
                             </div>
                         </a>
                     </div>
