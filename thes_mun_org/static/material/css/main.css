@@ -636,7 +636,7 @@ hr {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../imgs/test12.jpg");
+	background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../imgs/about_us_1.jpg");
 	/* height: 20rem; */
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -648,7 +648,7 @@ hr {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../imgs/about_us_3.jpg");
+	background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../imgs/about_us_2.jpg");
 	/* height: 20rem; */
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -660,7 +660,7 @@ hr {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../imgs/shutterstock_Cropped.jpg");
+	background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../imgs/about_us_3.jpg");
 	/* height: 20rem; */
 	background-size: cover;
 	background-repeat: no-repeat;
