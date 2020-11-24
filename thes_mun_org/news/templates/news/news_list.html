@@ -27,24 +27,28 @@
     <div class="parallax-wrapper">
         <div id="main" class="container content">
             <div class="parallax-sides parallax-news-sides"></div>
-                <h2 class="sans-small-caps bigger logo-blue">News</h2>
+                <h2 class="sans-small-caps bigger">News</h2>
                 <div class="news-posts">
                     {% for new in news %}
                         <div class="post">
                             <div class="img-container">
                                 <a href="{% url 'news:news-detail' new.slug %}" class="hover-link">
                                     <h2 class="post-title small-caps">{{new.title}}</h2>
-                                    <p class="date ">{{new.date|date:"F d, Y"}}</p>
+                                    <p class="date logo-blue">{{new.date|date:"F d, Y"}}</p>
                                 </a>
                             </div>
 
                             <a href="{% url 'news:news-detail' new.slug %}" class="hover-link">
                                 <div class="disc">
                                     <img class="post-img" src="{{new.image.url}}"  />
-                                    <p class="disc-txt">{{new.content|linebreaksbr|urlize|safe}}</p>
+                                    {% autoescape off %}
+                                        <p class="disc-txt">{{ new.content|linebreaksbr|safe }}</p>
+                                    {% endautoescape %}
                                 </div>
                             </a>
                         </div>
+                    {% empty %}
+                        <p class="red-bottom"> Sorry, this page is empty for now</p>
                     {% endfor %}
                 </div>
 

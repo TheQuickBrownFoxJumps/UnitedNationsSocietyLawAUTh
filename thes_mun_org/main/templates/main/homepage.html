@@ -62,20 +62,20 @@
 
                         <div class="g-item">
                             <h1 class="goal-1 goal "></h1>
-                            <p class=" bigger goal-desc">Educate young people and the community about the work of the United Nations.
-                            </p>
+                            <h3 class="goal-desc bigger">Educate young people and the community about the work of the United Nations.
+                            </h3>
                         </div>
 
                         <div class="g-item">
                             <h1 class="goal-2 goal sans-small-caps"></h1>
-                            <p class="goal-desc bigger">Empower young people to get involved in international affairs and civil society.
-                            </p>
+                            <h3 class="goal-desc bigger">Empower young people to get involved in international affairs and civil society.
+                            </h3>
                         </div>
 
                         <div class="g-item">
                             <h1 class="goal-3 goal sans-small-caps"></h1>
-                            <p class="goal-desc bigger">Act as forum for young people to network and socialize.
-                            </p>
+                            <h3 class="goal-desc bigger">Act as forum for young people to network and socialize.
+                            </h3>
                         </div>
 
                         <form action="{% url 'about-us' %}">
@@ -103,7 +103,10 @@
                         <a href="{% url 'events:events-detail' event.slug %}" class="fit">
                             <div class="fit">
                                 <img class="news-image" src="{{event.image.url}}" alt="">
-                                    <p class="news-p content smaller">{{event.title}}</p>
+                                <div class="content">
+                                    <p class="date logo-blue">{{event.date}}</p>
+                                    <p class="news-p smaller">{{event.title}}</p>
+                                </div>
                             </div>
                         </a>
                      </div>
@@ -127,7 +130,10 @@
                         <a href="{% url 'news:news-detail' new.slug %}" class="">
                             <div class="">
                                 <img class="news-image-vertical" src="{{new.image.url}}" alt="">
-                                <p class="news-p content smaller">{{new.title}}</p>
+                                <div class="content">
+                                    <p class="date logo-blue">{{new.date}}</p>
+                                    <p class="news-p smaller">{{new.title}}</p>
+                                </div>
                             </div>
                         </a>
                     </div>

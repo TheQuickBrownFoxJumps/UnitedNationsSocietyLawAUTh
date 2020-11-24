@@ -366,6 +366,8 @@ button {
 	margin-left: auto;
 	margin-right: auto;
 	width: 70%;
+	display: flex;
+	align-item: baseline;
 }
 
 .image-con {
@@ -422,26 +424,26 @@ button {
     /* margin-right: -3.75em; */
     position: absolute;
     /* left: 25%; */
-	margin-top: -0.5em;
-	margin-left: -8rem;
+	margin-top: 0.6em;
+	margin-left: -5rem;
 
 	content: "";
 }
 
 .goal-1::before {
-	background-image: url("../imgs/chat.svg");
+	background-image: url("../imgs/goal1.svg");
 	background-size: contain;
 	background-repeat: no-repeat;
 }
 
 .goal-2::before {
-	background-image: url("../imgs/edit-pen.svg");
+	background-image: url("../imgs/goal3.svg");
 	background-size: contain;
 	background-repeat: no-repeat;
 }
 
 .goal-3::before {
-	background-image: url("../imgs/meeting-table.svg");
+	background-image: url("../imgs/goal2.svg");
 	background-size: contain;
 	background-repeat: no-repeat;
 }

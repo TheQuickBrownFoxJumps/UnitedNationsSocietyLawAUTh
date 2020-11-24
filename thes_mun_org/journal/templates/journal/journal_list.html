@@ -29,24 +29,28 @@
         <div class="parallax-head parallax-journal-head"></div>
         <div id="main" class="container content">
             <div class="parallax-sides parallax-journal-sides"></div>
-            <h2 class="sans-small-caps bigger logo-blue">Journal</h2>
+            <h2 class="sans-small-caps bigger">Journal</h2>
             <div class="news-posts">
                 {% for journal in journals %}
                     <div class="post">
                         <div class="img-container">
                             <a href="{% url 'journal:journal-detail' journal.slug %}" class="hover-link">
                                 <h2 class="post-title small-caps">{{journal.title}}</h2>
-                                <p class="date ">{{journal.date|date:"F d, Y"}}</p>
+                                <p class="date logo-blue">{{journal.date|date:"F d, Y"}}</p>
                             </a>
                         </div>
 
                         <a href="{% url 'journal:journal-detail' journal.slug %}" class="hover-link">
                             <div class="disc">
                                 <img class="post-img" src="{{journal.image.url}}"  />
-                                <p class="disc-txt">{{journal.content|linebreaksbr}}</p>
+                                {% autoescape off %}
+                                    <p class="disc-txt">{{ journal.content|linebreaksbr|urlize }}</p>
+                                {% endautoescape %}
                             </div>
                         </a>
                     </div>
+                {% empty %}
+                    <p class="red-bottom"> Sorry, this page is empty for now</p>
                 {% endfor %}
             </div>
 
