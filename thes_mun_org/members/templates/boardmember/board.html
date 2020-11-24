@@ -23,9 +23,8 @@
 <body>
     <!-- <div class="container content"> -->
     <button onclick="topFunction()" id="widget" class="fa fa-arrow-up" title="Go to top"></button>
-
-    <div class="opening-container opening-board content">
-        <h2 class="sans-small-caps content bigger opening-text">Board Members</h2>
+    <div class="opening-container opening-board content ">
+        <h2 class="sans-small-caps content bigger opening-text item-color">Executive Board</h2>
     </div>
 
     <!-- </div> -->
@@ -45,9 +44,9 @@
 
                 <div class="bio content">
                     <!-- Title -->
-                    <p class="sans smaller"><b>{{member.get_role_display}}</b></p>
+                    <p class="sans bigger "><b>{{member.get_role_display}}</b></p>
                     <!-- Name -->
-                    <p class="sans pad-down smaller"><i>{{member.surname}} {{member.name}}</i></p>
+                    <p class="sans pad-down content logo-blue"><i>{{member.name}} {{member.surname}}</i></p>
                     <!-- Contact -->
                     <p class="sans pad-down smaller"><i>Contact: {{ member.email_url }}</i></p>
                     <!-- Description -->

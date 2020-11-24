@@ -3,6 +3,11 @@
 	--main-text-color: ;
 }
 
+/* darken background images put before url()
+	linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4) ),
+									 |					 | adjust for darkness
+*/
+
 html {
 	scroll-behavior: smooth;
 	height:100%;
@@ -39,7 +44,8 @@ body {
 .parallax-wrapper {
     position: relative;
     overflow: hidden;
-    padding-top: 15rem;
+    padding-top: 22rem;
+    padding-bottom: 12rem;
 }
 
 .parallax-sides {
@@ -69,32 +75,32 @@ body {
   }
 
 .parallax-news-sides {
-    background-image: url("../imgs/book2.jpg");
+    background-image: url("../imgs/parallax-news.jpg");
     height: 400%;
 }
 
 .parallax-news-head {
-    background-image: url("../imgs/book2.jpg");
+    background-image: url("../imgs/parallax-news.jpg");
     height: 35%;
 }
 
 .parallax-events-sides {
-    background-image: url("../imgs/parallax.jpg");
+    background-image: url("../imgs/parallax-events.jpg");
     height: 400%;
 }
 
 .parallax-events-head {
-    background-image: url("../imgs/parallax.jpg");
+    background-image: url("../imgs/parallax-events.jpg");
     height: 35%;
 }
 
 .parallax-journal-sides {
-    background-image: url("../imgs/parallax.jpg");
+    background-image: url("../imgs/parallax-journal.jpg");
     height: 400%
 }
 
 .parallax-journal-head {
-    background-image: url("../imgs/parallax.jpg");
+    background-image: url("../imgs/parallax-journal.jpg");
     height: 35%;
 }
 
@@ -126,6 +132,10 @@ p {
 	border-bottom: solid 1px white;
 	padding: 1rem;
 	letter-spacing: 0.5rem;
+}
+
+.item-color {
+    text-color: white;
 }
 
 .item:hover {
@@ -160,7 +170,7 @@ p {
 }
 
 .opening-board {
-	background:linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4) ), url("../imgs/about_us_3.jpg");
+	background:linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4) ), url("../imgs/test4.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 
@@ -169,7 +179,7 @@ p {
 }
 
 .opening-contact {
-	background:linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4) ), url("../imgs/about_us_2.jpg");
+	background:linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4) ), url("../imgs/test1.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 
@@ -178,7 +188,16 @@ p {
 }
 
 .opening-membership {
-	background:linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4) ), url("../imgs/about_us_1.jpg");
+	background:linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4) ), url("../imgs/test6.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	/* this is for parallax */
+	background-attachment: fixed;
+}
+
+.opening-about {
+	background:linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4) ), url("../imgs/test3.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 
@@ -207,14 +226,11 @@ p {
 	height: 50rem;
 
 	/* background-image: url(../imgs/about_us_3.jpg); */
-	background:linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4) ), url("../imgs/about_us_3.jpg");
+	background:linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4) ), url("../imgs/KofiAnnan.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 }
 
-/* .quote-pic {
-
-} */
 
 .quote-text {
 	color: #fff !important;
@@ -223,16 +239,33 @@ p {
 	align-text: center;
 }
 
-/*
-.swiper-slide {
-	text-align: center;
-	font-size: 18px;
-	background: #fff;
+.quote-container {
 
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-} */
+}
+
+
+	position: relative;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	/* margin:auto; */
+	width: 100%;
+	height: 40rem;
+
+	/* background-image: url(../imgs/about_us_3.jpg); */
+	background:linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4) ), url("../imgs/KofiAnnan.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.quote-text {
+	color: #fff !important	;
+	width: 40% ;
+}
+>>>>>>> 899ce65011fd7f4889239483c43a7bbe62eb061d
 
 .round {
 	border-radius: 50%;
@@ -383,6 +416,7 @@ button {
 }
 
 .goal-desc {
+	font-size: 96%;
 	padding-bottom: 3rem ;
 	padding-right: 0.5rem;
 	margin-left: 4rem;
@@ -390,9 +424,6 @@ button {
 
 .goal {
 	margin-left: 4rem;
-	/* margin-left: 0; */
-	/* text-align: left;
-	align-self: left !important; */
 	padding-right: 0.5rem;
 	/* padding-left: -1rem; */
 }
@@ -503,7 +534,7 @@ h3 {
 
 .link:hover {
 	background: white;
-	color: darkred;
+	color: #7d0e12;
 }
 
 .thin-border {
@@ -596,6 +627,10 @@ h3 {
 	border-right: solid 1px black;
 }
 
+.logo-blue {
+	color: #154282 !important;
+}
+
 hr {
 	width: 100%;
 	border: solid 1px black;
@@ -609,9 +644,6 @@ hr {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	/* padding: 2rem -1rem 0 0; */
-	/* height: 20rem; */
-	/* width: 100%; */
 	height: 30rem;
 	margin-top: 3rem;
 }
@@ -620,7 +652,7 @@ hr {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../imgs/logo_JPG.jpg");
+	background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../imgs/test12.jpg");
 	/* height: 20rem; */
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -664,7 +696,7 @@ hr {
 	z-index: 99; /* Make sure it does not overlap */
 	border: none; /* Remove borders */
 	outline: none; /* Remove outline */
-	background-color: darkred; /* Set a background color */
+	background-color: #7d0e12; /* Set a background color */
 	color: white; /* Text color */
 	cursor: pointer; /* Add a mouse pointer on hover */
 	padding: 1.8rem;
@@ -746,9 +778,12 @@ textarea:focus {
 a {
 	transition: color 0.2s ease-in-out;
 	text-decoration: none;
-	color: #444;
+	color: #333333;
 }
 
+.a-link {
+	color: #7d0e12;
+}
 
 .link:hover {
 	transition: 0.3s;
@@ -842,17 +877,14 @@ h4 {
 
 
 ::-moz-selection {
-	background: cornflowerblue;
+	background: #7d0e12;
 }
 
 
 ::selection {
-	background: cornflowerblue;
+	background: #7d0e12;
 }
 
-/* section {
-	height: 100vh;
-} */
 
 .news-meta {
 	line-height: 0.5em ;
@@ -1065,7 +1097,7 @@ news-txt {
 	max-width: 95vw;
 	margin-left: auto;
 	margin-right:auto;
-	padding-top: 2rem;
+	padding-top: 4rem;
 	padding-bottom: 2rem;
 
 	display:flex;
@@ -1220,8 +1252,7 @@ news-txt {
 }
 
 #footer ul li:hover {
-	color: darkred !important;
-
+	color: #7d0e12 !important;
 }
 
 .no-bottom {
@@ -1310,12 +1341,6 @@ button {
     align-items: flex-end;
 }
 
-@font-face {
-    font-family: IA;
-    src: url("../../iAWriterDuoV.ttf");
-    font-weight: 400;
-}
-
 .navbar-container {
 	display: flex;
 	/* flex-wrap: wrap; */
@@ -1375,7 +1400,7 @@ nav {
 
 .nav-link:hover {
     /* background-color: black; */
-	color: darkred;
+	color: #7d0e12;
 
 	/* border-left: 2px black;
 

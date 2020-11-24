@@ -8,8 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
 
-    <link rel="stylesheet" href="{% static 'material/css/main.css' %}">
-
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500&display=swap" >
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap" rel="stylesheet">
@@ -56,30 +54,27 @@
                 <div class="blur-div">
 
                 </div>
-                <section class="goal-container">
+                <section id="node-goals" class="goal-container">
 
-                    <blockquote id="node-goals"  class="quote bigger sans">Confucius says… without nipples, breasts would be pointless. </blockquote>
-
-
-                        <h3  class="sans-small-caps">What We Do</h3>
+                        <h3  class="sans-small-caps">Our Goals</h3>
                         <br><br><br>
 
                         <div class="g-item">
-                            <h1 class="goal-1 goal sans-small-caps">Goal 1</h1>
-                            <p class="goal-desc content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui provident vitae culpa omnis porro veniam,
-                                excepturi deleniti nesciunt beatae quae repellat non, voluptate modi adipisci nobis ratione esse enim laborum.</p>
+                            <h1 class="goal-1 goal "></h1>
+                            <p class=" bigger goal-desc">Educate young people and the community about the work of the United Nations.
+                            </p>
                         </div>
 
                         <div class="g-item">
-                            <h1 class="goal-2 goal sans-small-caps">Goal 2</h1>
-                            <p class="goal-desc content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui provident vitae culpa omnis porro veniam,
-                                excepturi deleniti nesciunt beatae quae repellat non, voluptate modi adipisci nobis ratione esse enim laborum.</p>
+                            <h1 class="goal-2 goal sans-small-caps"></h1>
+                            <p class="goal-desc bigger">Empower young people to get involved in international affairs and civil society.
+                            </p>
                         </div>
 
                         <div class="g-item">
-                            <h1 class="goal-3 goal sans-small-caps">Goal 3</h1>
-                            <p class="goal-desc content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui provident vitae culpa omnis porro veniam,
-                                excepturi deleniti nesciunt beatae quae repellat non, voluptate modi adipisci nobis ratione esse enim laborum.</p>
+                            <h1 class="goal-3 goal sans-small-caps"></h1>
+                            <p class="goal-desc bigger">Act as forum for young people to network and socialize.
+                            </p>
                         </div>
 
                         <form action="{% url 'about-us' %}">
@@ -90,15 +85,11 @@
                 </section>
             </div>
 
-            <div class="quote-container">
-                <p class="content quote-text red-bottom">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque deserunt expedita repudiandae deleniti quisquam
-                     rerum eligendi ipsam minima reprehenderit minus at delectus consequuntur omnis porro atque laborum distinctio, quae neque quidem
-                      voluptas est. Reprehenderit provident quisquam expedita illo nemo accusantium nam, quas aut minima, nulla quidem excepturi aliquam
-                       earum incidunt enim rem est adipisci asperiores. Facilis et nostrum ea ipsum numquam natus odio, similique veniam. Eius ratione, quod
-                        quos magnam mollitia in earum facere quam? Provident?
+            <div class="quote-container content">
+                <p class="content quote-text"> &ldquo; You are never too young to lead&hellip;&rdquo;
                 </p>
-                <p class="small-caps content quote-text">
-                    -Some Rando 2020
+                <p class="small-caps quote-text">
+                    Kofi Annan, Secretary-General of the United Nations 1997-2006
                 </p>
             </div>
 
