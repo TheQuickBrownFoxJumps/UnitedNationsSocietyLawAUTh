@@ -22,7 +22,7 @@ from django.contrib.auth.decorators import login_required
 class JournalView(ListView):
     template_name = 'journal/journal_list.html'
     model = Journal
-    context_object_name = 'journal'
+    context_object_name = 'journals'
     # to order the post from latest to oldest
     ordering = ['-date']
     paginate_by = 5
@@ -32,7 +32,7 @@ class JournalView(ListView):
         if query:
             journal = self.model.objects.filter(title__icontains=query)
         else:
-            journal = self.model.objects.all()
+            journal = self.model.objects.all().order_by('-date')
         return journal
 
 

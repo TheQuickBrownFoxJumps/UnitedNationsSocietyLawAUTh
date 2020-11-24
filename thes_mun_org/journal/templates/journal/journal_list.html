@@ -31,19 +31,19 @@
             <div class="parallax-sides parallax-journal-sides"></div>
             <h2 class="sans-small-caps bigger logo-blue">Journal</h2>
             <div class="news-posts">
-                {% for journals in journal %}
+                {% for journal in journals %}
                     <div class="post">
                         <div class="img-container">
-                            <a href="{% url 'journal:journal-detail' journals.slug %}" class="hover-link">
-                                <h2 class="post-title small-caps">{{journals.title}}</h2>
-                                <p class="date ">{{journals.date|date:"F d, Y"}}</p>
+                            <a href="{% url 'journal:journal-detail' journal.slug %}" class="hover-link">
+                                <h2 class="post-title small-caps">{{journal.title}}</h2>
+                                <p class="date ">{{journal.date|date:"F d, Y"}}</p>
                             </a>
                         </div>
 
-                        <a href="{% url 'journal:journal-detail' journals.slug %}" class="hover-link">
+                        <a href="{% url 'journal:journal-detail' journal.slug %}" class="hover-link">
                             <div class="disc">
-                                <img class="post-img" src="{{journals.image.url}}"  />
-                                <p class="disc-txt">{{journals.content|linebreaksbr}}</p>
+                                <img class="post-img" src="{{journal.image.url}}"  />
+                                <p class="disc-txt">{{journal.content|linebreaksbr}}</p>
                             </div>
                         </a>
                     </div>
