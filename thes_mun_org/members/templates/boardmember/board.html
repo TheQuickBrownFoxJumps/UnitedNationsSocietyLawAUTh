@@ -21,16 +21,14 @@
 {% include "main/navbar.html" %}
 
 <body>
-    <!-- <div class="container content"> -->
+
     <button onclick="topFunction()" id="widget" class="fa fa-arrow-up" title="Go to top"></button>
+
     <div class="opening-container opening-board content ">
         <h2 class="sans-small-caps content bigger opening-text item-color">Executive Board</h2>
     </div>
 
-    <!-- </div> -->
-
     {% for member in boardmember %}
-<!--    <div class="container">-->
         <div class="portraits-container ">
             <div class="person-container">
                 <a class="round" href="{{member.social_url}}">
