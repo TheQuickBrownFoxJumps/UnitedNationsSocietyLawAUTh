@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import mimetypes
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -23,9 +24,15 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'sfcf5==0#0=y(vkyze#2&)1qb-wyg1g%#s&w321dsab)la%bqt%wsv=4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'localhost',
+    'unsoc-auth.org/',
+    'unsoc-auth.org',
+    'www.unsoc-auth.org/',
+    'www.unsoc-auth.org',
+]
 
 
 # Application definition
@@ -149,20 +156,18 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
-    os.path.join(BASE_DIR, "media"),
+    os.path.join(BASE_DIR, 'static'),
 ]
 
+mimetypes.add_type("text/css", ".css", True)
+
 # Media files
-
-MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
-
 MEDIA_URL = '/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Grappelli
 GRAPPELLI_ADMIN_TITLE = 'United Nations Society - Law AUTh'

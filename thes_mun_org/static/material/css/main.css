@@ -1,12 +1,6 @@
-
 :root {
 	--main-text-color: ;
 }
-
-/* darken background images put before url()
-	linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4) ),
-									 |					 | adjust for darkness
-*/
 
 html {
 	scroll-behavior: smooth;
@@ -21,21 +15,7 @@ body {
 	padding: 0;
 	border: 0;
 }
-/*
-.wrapper{
-    min-height:100%;
-    margin-bottom: -142px;
-}
 
-.wrapper:after {
-  content: "";
-  display: block;
-}
-
-.site-footer, .wrapper:after {
-  height: 400px;
-}
-*/
 .inline {
 	/* display: inline; */
 	white-space: nowrap;

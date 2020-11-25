@@ -19,7 +19,7 @@ class Event(models.Model):
     image = ProcessedImageField(upload_to='events', processors=[ResizeToFit(300)], format='JPEG',
                                 options={'quality': 90}, default='test.png',
                                 help_text='Presentation Image')
-    image_detail = ProcessedImageField(upload_to='news', processors=[ResizeToFit(300)], format='JPEG',
+    image_detail = ProcessedImageField(upload_to='events', processors=[ResizeToFit(300)], format='JPEG',
                                        options={'quality': 90}, default='test.png',
                                        help_text='Second Image for Detail view')
     date = models.DateField(default=datetime.now)
