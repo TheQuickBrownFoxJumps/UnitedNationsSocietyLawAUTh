@@ -16,11 +16,11 @@ from django.utils.text import slugify
 class Event(models.Model):
     title = models.CharField(max_length=100)
     content = models.TextField()
-    image = ProcessedImageField(upload_to='events', processors=[ResizeToFit(300)], format='JPEG',
-                                options={'quality': 90}, default='test.png',
+    image = ProcessedImageField(upload_to='events', format='JPEG',
+                                options={'quality': 100}, default='test.png',
                                 help_text='Presentation Image')
-    image_detail = ProcessedImageField(upload_to='news', processors=[ResizeToFit(300)], format='JPEG',
-                                       options={'quality': 90}, default='test.png',
+    image_detail = ProcessedImageField(upload_to='news', format='JPEG',
+                                       options={'quality': 100}, default='test.png',
                                        help_text='Second Image for Detail view')
     date = models.DateField(default=datetime.now)
     author = models.ForeignKey(User, on_delete=models.CASCADE)

@@ -902,6 +902,7 @@ h4 {
 .news-image-vertical {
 	width: 18rem;
 	height: 14rem;
+
 	margin-bottom: 2rem;
 }
 
@@ -949,15 +950,16 @@ h4 {
 }
 
 .news-container {
-	width: 50%;
+	width: 60%;
 	padding: 2rem;
 	margin-bottom: 2rem;
 	margin-top: 1rem;
 }
 
 .news-image {
-	width: 100%;
-	height: 25rem;
+    width: 100%;
+	object-fit: cover;
+	overflow: hidden;
 	margin-bottom: 2rem;
 }
 
@@ -989,12 +991,13 @@ h4 {
 /* } */
 
 .post-img {
-	display: block !important;
-	/* height: 50%; */
+	/*display: block !important;*/
 	padding-right: 1rem;
-	width: 40rem;
-	height: 20rem;
-	/* min-width: 15rem; */
+	width: 100%;
+	/*width: 40rem;
+	height: 20rem;*/
+	object-fit: cover;
+	overflow: hidden;
 }
 
 .disc-txt {
@@ -1715,15 +1718,28 @@ ul li:hover ul {
 
 	.logo {
 		/* width: 150px; */
-		padding: 2rem 0 0 0;
+		padding: 0 0 0 0;
 				/* margin: 0; */
 		align-self: center;
 		margin-left: 0;
 		margin-top: -13rem;
 
-		/* width: 150px; */
+		width: 500px;
 	}
 
+}
+
+@media only screen and (max-width: 1300px) {
+
+    #footer .content section {
+        width: 70%;
+        /*flex-wrap: wrap;*/
+    }
+
+    #footer .content section:first-child {
+		width: 77%;
+        padding-right: 0;
+	}
 }
 
 @media only screen and (max-width: 1220px) {
@@ -1802,13 +1818,15 @@ ul li:hover ul {
 		padding: 0.6rem;
 	}
 
+
 	#footer {
-        padding: 4rem 0 2rem 0;
+        padding: 2rem 0 0 0;
 	}
 
 	#footer .content {
         flex-wrap: wrap;
 	}
+
 
 	h4 {
 		margin-top: 1.2rem;
@@ -1829,6 +1847,7 @@ ul li:hover ul {
 
 	.md-container-simple {
 	    flex-direction: column;
+	    align-items: center;
 	}
 }
 
@@ -1894,7 +1913,7 @@ ul li:hover ul {
     }
 
     #footer .content section:first-child {
-		width: 70%;
+		width: 75%;
         padding-right: 0;
 	}
 
@@ -2013,6 +2032,10 @@ ul li:hover ul {
 		padding-left: 0;
 	}
 
+	.logo {
+		width: 400px;
+	}
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -2086,8 +2109,8 @@ ul li:hover ul {
 	}
 
 	.goal::before {
-		width: 3rem;
-		height: 3rem;
+		width: 5rem;
+		height: 5rem;
 		margin-left: -3.5rem;
 		margin-top: -0.3rem;
 	}
@@ -2115,7 +2138,7 @@ ul li:hover ul {
 	}
 
 	.logo {
-		width: 180px;
+		width: 250px;
 	}
 
 	.footer-logo {
@@ -2134,6 +2157,12 @@ ul li:hover ul {
 		padding-left: 0;
 	}
 
+}
+
+@media only screen and (max-width: 420px) {
+    .logo {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 400px) {
@@ -2175,4 +2204,6 @@ ul li:hover ul {
 	}
 
 }
+
+
 
